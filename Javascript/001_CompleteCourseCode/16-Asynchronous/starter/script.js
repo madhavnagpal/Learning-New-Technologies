@@ -123,3 +123,39 @@ btn.addEventListener('click', function () {
     })
     .catch(console.error);
 });
+
+btn.addEventListener('click', async function () {
+  try {
+    const firstImageElement = await createImage('./img/img-1.jpg');
+    await wait(2);
+    firstImageElement.style.width = '200px';
+    const secondImageElement = await createImage('img/img-2.jpg');
+    await wait(2);
+    secondImageElement.style.width = '200px';
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+const images = ['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg'];
+
+async function loadAll(imgArr) {
+  try {
+    const response = await Promise.all(imgArr.map(createImage));
+    response.forEach(element => element.classList.add('parallel'));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function loadAll(imgArr) {
+  Promise.all(imgArr.map(createImage))
+    .then(values => {
+      values.forEach(element => element.classList.add('parallel'));
+    })
+    .catch(console.error);
+}
+
+btn.addEventListener('click', () => {
+  loadAll(images);
+});
