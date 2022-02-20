@@ -6,7 +6,9 @@ Sections to read and make notes
 2
 3
 4
+  4.1 done
 5
+   5.4 done
 6
 7
 8
