@@ -81,3 +81,43 @@ function App() {
 
 export default App;
 ```
+
+
+```
+.App {
+  text-align: center;
+}
+
+.tab-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  padding: 8px 12px;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+
+.tab--active {
+  border: 2px solid #493ab1;
+  color: #493ab1;
+  border-radius: 5px;
+}
+
+.tab--disabled {
+  opacity: 0.5;
+  border-bottom: none;
+  cursor: not-allowed
+}
+
+.tab-panel {
+  padding: 12px 16px;
+  border: 1.5px solid black;
+  margin: 12px;
+  border-radius: 5px;
+}
+```
