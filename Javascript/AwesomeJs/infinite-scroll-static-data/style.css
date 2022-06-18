@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Avenir Next", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+.loop_container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: green;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
