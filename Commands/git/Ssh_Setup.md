@@ -15,6 +15,25 @@ Give a unique file name like **id_rsa_myscoot**
 6. Copy the SSH URL of the GitLab repo you wish to clone
 7. Issue a git clone command with the SSH URL
 
+```
+touch config
+```
+
+In config
+
+```
+# Personal account - the default config
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa.pub
+
+# Work account
+  Host gitlab.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_rsa_myscoot
+```
+
 #### Ubuntu
 
 Setting up ssh
